@@ -26,5 +26,7 @@ while 1:
 
     print json.dumps({"the rate is":rate}) #print rate
     sys.stdout.flush() # flush to stdout
-
+    if rate < 0.622:
+	print "LOOKS LIKE UNFAIR DICE"
+	sys.stdout.flush()
     time.sleep(0.5) #sleep
