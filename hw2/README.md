@@ -39,3 +39,14 @@ the output from previous step is flushed to std in of pipe-to-redis.py. This fil
 		python randomtoss.py | python diff-calculate.py | python rate-gen.py | python pipe-to-redis.py
 		
 > Finally to calculate the rate, we call the program rate-calculator.py. It gets its values from the redis database and calculates the rate of the messages(ie, delta-time which satisfy the condition). 
+
+> In the program rate-calculator.py, we add a condition so that is there is any abnormal behavior in the rate, it is displayed as "UNFAIR DICE". We can connect this to a webpage by following commands
+		 
+		 websocketd --port=8080 python pythoncode.py #to serve as websocket
+		 
+		 python -m SimpleHTTPServer 8081 #to start server on port 8081
+		 
+The screenshots look as follows:
+
+![screen shot 2016-02-24 at 5 36 44 pm](https://cloud.githubusercontent.com/assets/16795243/13303583/3194c80e-db1e-11e5-80a0-c46ddd03c3df.png)
+![screen shot 2016-02-24 at 5 36 32 pm](https://cloud.githubusercontent.com/assets/16795243/13303585/32a869f8-db1e-11e5-97ac-e8a65548aa9b.png)
