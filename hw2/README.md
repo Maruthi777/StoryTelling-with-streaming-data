@@ -1,5 +1,6 @@
 #Homework 2
 
+#Streaming data based on probability distributon
 If we toss a dice, the probability of getting any face is 1/6. But if we actually take a dice and toss it and calculate probability of getting a face based on the outcome, the ratio for one face will be 1 and all other faces will be 0.
 Similarly, if we toss the dice for a second time and calculate probability, the probability for at least four faces will be 0. 
 
