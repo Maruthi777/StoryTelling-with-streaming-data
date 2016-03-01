@@ -42,7 +42,7 @@ the output from previous step is flushed to std in of pipe-to-redis.py. This fil
 
 > In the program rate-calculator.py, we add a condition so that is there is any abnormal behavior in the rate, it is displayed as "UNFAIR DICE". We can connect this to a webpage by following commands
 		 
-		 websocketd --port=8080 python pythoncode.py #to serve as websocket
+		 websocketd --port=8080 python rate-calculator.py #to serve as websocket
 		 
 		 python -m SimpleHTTPServer 8081 #to start server on port 8081
 		 
